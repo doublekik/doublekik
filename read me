@@ -1,0 +1,7 @@
+import google.appengine.api
+
+def app(environ, start_response):
+    start_response('200 OK', [('Content-Type', 'text/plain')])
+    yield b'Hello world!\n'
+
+app = google.appengine.api.wrap_wsgi_app(kellyiskey)
